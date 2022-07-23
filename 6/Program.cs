@@ -8,13 +8,12 @@ namespace _6
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void DrawRectangle(int heigth, int width)
         {
-
-            for (int i = 0; i < 10; i++)       //треугольник
+            for (int i = 0; i < heigth; i++)       //треугольник
             {
 
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < width; j++)
                 {
                     Console.Write("*");
                 }
@@ -22,8 +21,11 @@ namespace _6
 
                 Console.WriteLine();
             }
-
-            Console.WriteLine("\n");
+        }
+        static void Main(string[] args)
+        {
+            DrawRectangle(4, 15);
+            Console.ReadLine();
         }
     }
 }
