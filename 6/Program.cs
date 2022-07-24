@@ -22,31 +22,58 @@ namespace _6
                 Console.WriteLine();
             }
         }
-        static void DrawTriangle(int width)
+        static void DrawTriangle(int width, bool vverh)
         {
-            int razmer = 5;
-            for (int i = 0; i < width; i++)       //треугольник
+            if(vverh == true)
             {
-
-                for (int j = width; j > 0; j--)
+                for (int i = 0; i < width; i++)       //треугольник
                 {
-                    if (i >= j) Console.Write("[]");
-                    else Console.Write("  ");
-                }
-                for (int j = 0; j < width; j++)
-                {
-                    if (i >= j) Console.Write("[]");
-                    else Console.Write("  ");
+
+                    for (int j = width; j > 0; j--)
+                    {
+                        if (i >= j) Console.Write("*");
+                        else Console.Write(" ");
+                    }
+                    for (int j = 0; j < width; j++)
+                    {
+                        if (i >= j) Console.Write("*");
+                        else Console.Write(" ");
+                    }
+
+                    Console.WriteLine();
+
                 }
 
-                Console.WriteLine();
+
             }
+            else
+            {
+                for (int i = width; i > 0; i--)       //треугольник
+                {
+
+                    for (int j = width; j > 0; j--)
+                    {
+                        if (i >= j) Console.Write("*");
+                        else Console.Write(" ");
+                    }
+                    for (int j = 0; j < width; j++)
+                    {
+                        if (i >= j) Console.Write("*");
+                        else Console.Write(" ");
+                    }
+
+                    Console.WriteLine();
+
+                }
+            }
+
         }
 
 
         static void Main(string[] args)
         {
-            DrawTriangle(10);
+            DrawTriangle(15, true);
+            DrawTriangle(15, false);
             //DrawRectangle(5, 5);
             Console.ReadLine();
         }
